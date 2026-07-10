@@ -53,8 +53,10 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Symfony CLI
-RUN curl -sS https://get.symfony.com/cli/installer | bash
-
+COPY --link \
+    --from=ghcr.io/symfony-cli/symfony-cli:latest \
+    /usr/local/bin/symfony /usr/local/bin/symfony
+    
 # Nodejs
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
@@ -98,8 +100,6 @@ services:
             - '3306:3306'
           volumes:
             - ./mysql:/var/lib/mysql
-     
-
 ```
 
 Toutes les commandes seront lancées à partir du conteneur docker

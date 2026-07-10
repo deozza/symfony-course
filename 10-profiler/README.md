@@ -1,0 +1,2 @@
+- https://symfony.com/doc/current/profiler.html
+- https://symfonycasts.com/screencast/symfony/profiler

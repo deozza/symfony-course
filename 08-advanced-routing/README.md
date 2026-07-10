@@ -1,0 +1,4 @@
+- https://symfony.com/doc/current/routing.html#route-parameters
+- https://symfony.com/doc/current/doctrine.html#fetching-objects-from-the-database
+- https://symfony.com/doc/current/doctrine.html#automatically-fetching-objects-entityvalueresolver
+- https://symfonycasts.com/screencast/symfony/route-requirements
